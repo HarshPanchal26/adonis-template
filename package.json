@@ -1,0 +1,49 @@
+{
+  "name": "GoAvidoServer",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node ace serve --watch",
+    "debug": "node ace serve --watch --node-args='--inspect'",
+    "build": "node ace build --production; cp .env build/.env",
+    "start": "node ace serve --watch",
+    "ace": "node ace",
+    "ace-h": "node ace -h",
+    "routes": "node ace list:routes",
+    "db:setup": "node ace db:drop; node ace db:create; node ace migration:run; node ace db:seed",
+    "db:setup:win": "node ace db:drop && node ace db:create && node ace migration:run && node ace db:seed"
+  },
+  "devDependencies": {
+    "@adonisjs/assembler": "^5.6.2",
+    "@japa/preset-adonis": "^1.0.15",
+    "@japa/runner": "^2.0.7",
+    "adonis-preset-ts": "^2.1.0",
+    "pino-pretty": "^7.6.1",
+    "typescript": "~4.6",
+    "youch": "^3.2.0",
+    "youch-terminal": "^2.1.3"
+  },
+  "dependencies": {
+    "@adonisjs/auth": "^8.2.3",
+    "@adonisjs/core": "^5.9.0",
+    "@adonisjs/drive-s3": "^1.3.3",
+    "@adonisjs/lucid": "^18.4.2",
+    "@adonisjs/mail": "^8.2.1",
+    "@adonisjs/repl": "^3.1.10",
+    "@adonisjs/session": "^6.2.3",
+    "@adonisjs/shield": "^7.0.10",
+    "@adonisjs/view": "^6.1.4",
+    "@rocketseat/adonis-bull": "^1.0.4",
+    "axios": "^1.5.1",
+    "http-proxy": "^1.18.1",
+    "jsonwebtoken": "^9.0.2",
+    "luxon": "^2.4.0",
+    "moment": "^2.29.3",
+    "mysql2": "^2.3.3",
+    "phc-argon2": "^1.1.4",
+    "pretty-ms": "^7.0.1",
+    "proxy-addr": "^2.0.7",
+    "reflect-metadata": "^0.1.13",
+    "source-map-support": "^0.5.21"
+  }
+}
