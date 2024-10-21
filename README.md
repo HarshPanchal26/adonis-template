@@ -6,7 +6,6 @@
 
 - nodeJS v18
 - MySQL 8
-- Redis 5
 
 MySQL and redis you can run via docker-compose: `docker-compose up -d` or `docker compose up -d`
 to down docker-compose services as `docker-compose down` or `docker compose down`
@@ -40,7 +39,7 @@ While running locally, no need to run worker separately, it's already part of se
 npm run debug
 ```
 
-## Docker & CI/CD
+<!-- ## Docker & CI/CD
 
 ```sh
 docker build . -t local-app:1.0 --no-cache
@@ -79,4 +78,4 @@ jobs:
           tags: |
             ${{ secrets.ECR_REGISTRY_STAGING }}:${{ github.sha }}
             ${{ secrets.ECR_REGISTRY_STAGING }}:latest
-```
+``` -->
